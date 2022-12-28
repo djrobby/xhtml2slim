@@ -1,3 +1,7 @@
+# Credit
+
+This package is a derivative/fork of [xhtml2pug](https://www.npmjs.com/package/xhtml2pug), created by [dimensi](https://github.com/dimensi). I simply modified it to generate Slim code (which is very similar to Pug) as I'm a heavy user of Ruby based Slim rendering engine.
+
 # xhtml2slim
 
 Converts **HTML** and **Vue** like syntax to **Slim** or **Pug** templating language.  
