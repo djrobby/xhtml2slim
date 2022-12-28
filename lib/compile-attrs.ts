@@ -4,12 +4,12 @@ export const wrapAttrs = (options: CompileOptions, str?: string) => {
   if (str) {
     switch (options.attrWrapper) {
       case "curly":
-        return `{${str}}`;
+        return `{${str.trimEnd()}}`;
       case "square":
-        return `[${str}]`;
+        return `[${str.trimEnd()}]`;
 
       default:
-        return `(${str})`;
+        return `(${str.trimEnd()})`;
     }
   } else {
     return "";

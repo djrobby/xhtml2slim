@@ -119,7 +119,9 @@ const compileTag = (node: Tag, options: CompileOptions) => {
   }
 
   const textNode = getFirstText(node.children);
-  if (!textNode) return tag;
+  if (!textNode) {
+    return tag.indexOf("`") > -1 ? tag : tag.replace(/\r?\n\s+|\r\s+/g, "");
+  }
   const resultText = textNode.value.includes("\n")
     ? "\n" + compileText(textNode, { ...options, level: options.level + 1 })
     : " " + compileSingleLineText(textNode, options);
