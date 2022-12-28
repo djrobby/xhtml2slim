@@ -1,6 +1,6 @@
 {
   "name": "xhtml2slim",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "library for convert html2slim",
   "files": [
     "dist",
