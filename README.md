@@ -35,6 +35,14 @@ html(lang='en')
       h1.title Hello World!
 ```
 
+## Install
+
+Get it on [npm](https://www.npmjs.com/package/xhtml2slim):
+
+```bash
+npm install -g xhtml2slim
+```
+
 ## Usage
 
 ### CLI
