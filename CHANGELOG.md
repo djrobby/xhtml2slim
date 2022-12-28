@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 5.0.0 (2022-12-28)
+
+
+### ⚠ BREAKING CHANGES
+
+* update multiline attributes compile logic
+
+### Features
+
+* add classesAtEnd option ([c823ae6](https://github.com/djrobby/xhtml2slim/commit/c823ae65eae6aa3d456da7b9f3205aff2383c990))
+* add release-please ([ca3f319](https://github.com/djrobby/xhtml2slim/commit/ca3f319350d6e583437653f33f4c14a1614606a0))
+* add standard-version ([63c64fc](https://github.com/djrobby/xhtml2slim/commit/63c64fc0f757da45e0c87740ddebd17fb6bc60b7))
+* add trim start to compile multiline text ([a0c42ec](https://github.com/djrobby/xhtml2slim/commit/a0c42ecfeb59713067b509e58efc6a12409c0f5d))
+* add vue parser ([7525f44](https://github.com/djrobby/xhtml2slim/commit/7525f447f9c1770dd71ec9417bd7325beab0b4f3))
+* **bin:** done with bin ([2e96a0d](https://github.com/djrobby/xhtml2slim/commit/2e96a0d59882f359726e6aaf873665be4100718e))
+* fix build? ([488f7f7](https://github.com/djrobby/xhtml2slim/commit/488f7f71c7690eadfc9041b46449e1180f3cc80c))
+* move to vite + jest ([83979c9](https://github.com/djrobby/xhtml2slim/commit/83979c9cadfba367fca5cf1326947ee9016422f7))
+* **package.json:** update build logic ([001bcca](https://github.com/djrobby/xhtml2slim/commit/001bccae5990aa6e757a2439ded42ad6e95f71a5))
+* **package:** add peer dep as devDep ([4bf2397](https://github.com/djrobby/xhtml2slim/commit/4bf2397771011e0b291ba2562d444f715d2493e0))
+* **package:** move parcel to devdeps ([a915f9b](https://github.com/djrobby/xhtml2slim/commit/a915f9b0a205d18143a70750b32fa629950554b1))
+* **readme:** update readme ([a7aa420](https://github.com/djrobby/xhtml2slim/commit/a7aa4202584d547b8f6e1f843ccfac62b9f6bf9f))
+* update build logic ([f4b787d](https://github.com/djrobby/xhtml2slim/commit/f4b787dc15bcb0069838eee317e467fdfda2cafe))
+* update multiline attributes compile logic ([ed5d116](https://github.com/djrobby/xhtml2slim/commit/ed5d116181725b8875cea0f686a3a3de2d3ea6f2))
+* **xhtml2pug:** wip on bin ([20e5f7e](https://github.com/djrobby/xhtml2slim/commit/20e5f7e6cba5ac3b572350f983e199b33c5d6202))
+
+
+### Bug Fixes
+
+* add release-please ([3f03e9a](https://github.com/djrobby/xhtml2slim/commit/3f03e9a04012f8bc58ea1cd0e50c312b1534133a))
+* add release-please ([f63d9b9](https://github.com/djrobby/xhtml2slim/commit/f63d9b979fd3e20662bd2b561d4b0187c5c616dc))
+* improve parse directive logic ([432747c](https://github.com/djrobby/xhtml2slim/commit/432747c04b672f9d63693b6b1fa460541f83e7d0))
+* work on auto publish ([e2e7f59](https://github.com/djrobby/xhtml2slim/commit/e2e7f5962c4ba66c2c972a7ee4908f0a53f3598c))
+
 ## [4.0.2](https://github.com/dimensi/xhtml2pug/compare/v4.0.1...v4.0.2) (2022-06-19)
 
 
