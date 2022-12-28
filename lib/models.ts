@@ -61,6 +61,8 @@ export interface PublicOptions {
   inlineCSS: boolean;
   /** Symbol for indents, can be anything */
   symbol: string;
+  /** Wrapper for attributes: curly{}, default:round(), square[] */
+  attrWrapper: "curly" | "round" | "square";
   /** Html for any standard html, vue for any vue-like html */
   parser: "html" | "vue";
   /** Place all classes after attributes */

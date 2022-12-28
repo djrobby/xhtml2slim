@@ -1,6 +1,6 @@
 # xhtml2slim
 
-Converts **HTML** and **Vue** like syntax to **Slim** templating language.  
+Converts **HTML** and **Vue** like syntax to **Slim** or **Pug** templating language.  
 Requires Node.js version `14` or higher.
 
 Turns this
@@ -29,14 +29,6 @@ html(lang='en')
    body
     #content
       h1.title Hello World!
-```
-
-## Install
-
-Get it on [npm](https://www.npmjs.com/package/xhtml2slim):
-
-```bash
-npm install -g xhtml2slim
 ```
 
 ## Usage
@@ -73,17 +65,18 @@ const slim = convert(html, { symbol: "\t" });
 ### Cli Options
 
 ```bash
-  -b, --bodyLess      Don't wrap into html > body
-                                           [boolean] [default: false]
+  -b, --bodyLess      Don't wrap into html > body      [boolean] [default: true]
   -t, --tabs          Use tabs as indent              [boolean] [default: false]
   -s, --spaces        Number of spaces for indent          [number] [default: 2]
-  -a, --attrComma     Commas in attributes [boolean] [default: false]
+  -a, --attrComma     Commas in attributes            [boolean] [default: false]
   -e, --encode        Encode html characters           [boolean] [default: true]
-  -q, --doubleQuotes  Use double quotes for attributes[boolean] [default: false]
+  -q, --doubleQuotes  Use double quotes for attributes [boolean] [default: true]
   -i, --inlineCSS     Place all classes in class attribute
-                                                      [boolean] [default: false]
+                                                       [boolean] [default: true]
   -c, --classesAtEnd  Place all classes after attributes
                                                       [boolean] [default: false]
+  -w, --attrWrapper   Wrap attributes in round brackets
+               [string] [choices: "curly", "round", "sqaure"] [default: "round"]
   -p, --parser        html for any standard html, vue for any vue-like html
                              [string] [choices: "html", "vue"] [default: "html"]
 ```
@@ -104,6 +97,8 @@ export interface PublicOptions {
   inlineCSS: boolean;
   /** Symbol for indents, can be anything */
   symbol: string;
+  /** Wrapper for attributes: curly{}, default:round(), square[] */
+  attrWrapper: "curly" | "round" | "square";
   /** Html for any standard html, vue for any vue-like html */
   parser: "html" | "vue";
   /** Place all classes after attributes */
