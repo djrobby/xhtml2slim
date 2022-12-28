@@ -76,7 +76,7 @@ const slim = convert(html, { symbol: "\t" });
   -c, --classesAtEnd  Place all classes after attributes
                                                       [boolean] [default: false]
   -w, --attrWrapper   Wrap attributes in round brackets
-               [string] [choices: "curly", "round", "sqaure"] [default: "round"]
+               [string] [choices: "curly", "round", "square"] [default: "round"]
   -p, --parser        html for any standard html, vue for any vue-like html
                              [string] [choices: "html", "vue"] [default: "html"]
 ```

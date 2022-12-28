@@ -59,7 +59,7 @@ async function init() {
     .option("attrWrapper", {
       alias: "w",
       default: "round",
-      choices: ["curly", "round", "sqaure"],
+      choices: ["curly", "round", "square"],
       desc: "Wrap attributes in round brackets",
       type: "string",
     })
