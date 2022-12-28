@@ -76,6 +76,7 @@ const compileComment = (node: Comment, options: CompileOptions) => {
 
 const compileScript = (node: Script, options: CompileOptions) =>
   `${getIndent(options)}script${wrapAttrs(
+    options,
     compileAttrs(node.attrs, options)
   )}${wrapPreformattedText(node.value, {
     ...options,
@@ -84,6 +85,7 @@ const compileScript = (node: Script, options: CompileOptions) =>
 
 const compileStyle = (node: Style, options: CompileOptions) =>
   `${getIndent(options)}style${wrapAttrs(
+    options,
     compileAttrs(node.attrs, options)
   )}${wrapPreformattedText(node.value, {
     ...options,
@@ -99,7 +101,7 @@ const compileTag = (node: Tag, options: CompileOptions) => {
       getIndent(options),
       node.name,
       id ? `#${id}` : "",
-      wrapAttrs(compileAttrs(attrs, options)),
+      wrapAttrs(options, compileAttrs(attrs, options)),
       className ? "." + className.split(" ").join(".") : "",
     ]
       .filter(Boolean)
@@ -110,7 +112,7 @@ const compileTag = (node: Tag, options: CompileOptions) => {
       (id || className) && node.name === "div" ? "" : node.name,
       id ? `#${id}` : "",
       className ? "." + className.split(" ").join(".") : "",
-      wrapAttrs(compileAttrs(attrs, options)),
+      wrapAttrs(options, compileAttrs(attrs, options)),
     ]
       .filter(Boolean)
       .join("");

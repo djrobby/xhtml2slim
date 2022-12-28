@@ -9,11 +9,12 @@ const setupDefaultOptions = ({
   ...options
 }: Partial<PublicOptions>): ConvertOptions => ({
   attrSep: attrComma ? ", " : " ",
-  bodyLess: false,
+  bodyLess: true,
   doubleQuotes: true,
   encode: true,
   inlineCSS: false,
   symbol: "  ",
+  attrWrapper: "round",
   parser: "html",
   classesAtEnd: false,
   ...options,

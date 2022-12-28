@@ -1,6 +1,6 @@
-# xhtml2pug
+# xhtml2slim
 
-Converts **HTML** and **Vue** like syntax to **Pug** templating language.  
+Converts **HTML** and **Vue** like syntax to **Slim** templating language.  
 Requires Node.js version `14` or higher.
 
 Turns this
@@ -21,7 +21,7 @@ Turns this
 
 Into this
 
-```pug
+```slim
 doctype html
 html(lang='en')
   head
@@ -33,10 +33,10 @@ html(lang='en')
 
 ## Install
 
-Get it on [npm](https://www.npmjs.com/package/xhtml2pug):
+Get it on [npm](https://www.npmjs.com/package/xhtml2slim):
 
 ```bash
-npm install -g xhtml2pug
+npm install -g xhtml2slim
 ```
 
 ## Usage
@@ -47,27 +47,27 @@ Accept input from a file or stdin and write to stdout:
 
 ```bash
 # choose a file
-xhtml2pug < example.html
+xhtml2slim < example.html
 
 # use pipe
-echo '<h1>foo</h1>' | xhtml2pug -f
+echo '<h1>foo</h1>' | xhtml2slim -f
 ```
 
 Write output to a file:
 
 ```bash
-xhtml2pug < example.html > example.pug
+xhtml2slim < example.html > example.slim
 ```
 
-See `xhtml2pug --help` for more information.
+See `xhtml2slim --help` for more information.
 
 ### Programmatically
 
 ```js
-import { convert } from "xhtml2pug";
+import { convert } from "xhtml2slim";
 
 const html = '<header><h1 class="title">Hello World!</h1></header>';
-const pug = convert(html, { symbol: '\t' });
+const slim = convert(html, { symbol: "\t" });
 ```
 
 ### Cli Options

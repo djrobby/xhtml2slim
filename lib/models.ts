@@ -74,6 +74,7 @@ export interface ConvertOptions {
   doubleQuotes: boolean;
   inlineCSS: boolean;
   symbol: string;
+  attrWrapper: "curly" | "round" | "square";
   parser: "html" | "vue";
   classesAtEnd: boolean;
 }

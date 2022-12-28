@@ -6,11 +6,11 @@ const { convert } = require("../dist/main");
 
 async function init() {
   const yargs = require("yargs")(hideBin(process.argv))
-    .scriptName("xhtml2pug")
-    .usage("$0 [args] < [file]", "converts HTML to Pug")
+    .scriptName("xhtml2slim")
+    .usage("$0 [args] < [file]", "converts HTML to Slim")
     .option("bodyLess", {
       alias: "b",
-      default: false,
+      default: true,
       desc: "Don't wrap into html > body",
       type: "boolean",
     })
@@ -40,13 +40,13 @@ async function init() {
     })
     .option("doubleQuotes", {
       alias: "q",
-      default: false,
+      default: true,
       desc: "Use double quotes for attributes",
       type: "boolean",
     })
     .option("inlineCSS", {
       alias: "i",
-      default: false,
+      default: true,
       desc: "Place all classes in class attribute",
       type: "boolean",
     })
@@ -55,6 +55,13 @@ async function init() {
       default: false,
       desc: "Place all classes after attributes",
       type: "boolean",
+    })
+    .option("attrWrapper", {
+      alias: "w",
+      default: "round",
+      choices: ["curly", "round", "sqaure"],
+      desc: "Wrap attributes in round brackets",
+      type: "string",
     })
     .option("parser", {
       alias: "p",
@@ -65,7 +72,7 @@ async function init() {
     })
     .command("$0")
     .example("$0 -s 4 < index.html", "write to stdout")
-    .example("$0 -s 4 < index.html > index.pug", "write to file")
+    .example("$0 -s 4 < index.html > index.slim", "write to file")
     .example("$0 -p vue < component.html", "write to stdout and parse as vue");
 
   const { default: getStdin } = await import("get-stdin");
@@ -81,6 +88,7 @@ async function init() {
     doubleQuotes,
     encode,
     inlineCSS,
+    attrWrapper,
     parser,
     spaces,
     tabs,
@@ -92,6 +100,7 @@ async function init() {
     doubleQuotes,
     inlineCSS,
     symbol: tabs ? "\t" : " ".repeat(spaces),
+    attrWrapper,
     parser,
     classesAtEnd,
   };

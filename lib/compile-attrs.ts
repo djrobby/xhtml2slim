@@ -1,6 +1,20 @@
 import { Attr, CompileOptions } from "./models";
 
-export const wrapAttrs = (str?: string) => (str ? `(${str})` : "");
+export const wrapAttrs = (options: CompileOptions, str?: string) => {
+  if (str) {
+    switch (options.attrWrapper) {
+      case "curly":
+        return `{${str}}`;
+      case "square":
+        return `[${str}]`;
+
+      default:
+        return `(${str})`;
+    }
+  } else {
+    return "";
+  }
+};
 
 const allowValue = (str: string) => !/[{}_]/.test(str);
 
@@ -45,8 +59,6 @@ const wrapInQuotes = (
 export const compileAttrs = (attrs: Attr[], options: CompileOptions) =>
   attrs
     .map(({ key, value }) =>
-      [key, value && wrapInQuotes(value, options)]
-        .filter((str) => str != null)
-        .join("=")
+      [key, wrapInQuotes(value, options)].filter((str) => str != null).join("=")
     )
     .join(options.attrSep);

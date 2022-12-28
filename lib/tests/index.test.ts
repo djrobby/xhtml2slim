@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { test, expect } from "@jest/globals";
 
 import { convert } from "../main";
 
@@ -12,6 +13,7 @@ const htmlOnly = [
   "pre1.html",
   "pre2.html",
   "pre3.html",
+  "square-attr-wrapper.html",
   "test.html",
 ];
 

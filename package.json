@@ -1,13 +1,13 @@
 {
-  "name": "xhtml2pug",
+  "name": "xhtml2slim",
   "version": "4.0.2",
-  "description": "library for convert html2pug",
+  "description": "library for convert html2slim",
   "files": [
     "dist",
     "bin"
   ],
   "bin": {
-    "xhtml2pug": "bin/xhtml2pug"
+    "xhtml2slim": "bin/xhtml2slim"
   },
   "source": "./lib/main.ts",
   "main": "./dist/main.js",
@@ -19,16 +19,16 @@
       "require": "./dist/main.js"
     }
   },
-  "repository": "https://github.com/dimensi/xhtml2pug",
+  "repository": "https://github.com/djrobby/xhtml2slim",
   "author": {
-    "email": "eddimensi@gmail.com",
-    "name": "Nikita Nafranets"
+    "email": "djrobby@gmail.com",
+    "name": "Robby Dhillon"
   },
   "license": "MIT",
   "keywords": [
-    "html to pug",
-    "html2pug",
-    "convert html to pug"
+    "html to slim",
+    "html2slim",
+    "convert html to slim"
   ],
   "scripts": {
     "watch": "parcel watch",
@@ -37,34 +37,34 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "@parcel/config-default": "^2.0.1",
-    "@parcel/core": "^2.0.1",
-    "@parcel/packager-ts": "^2.0.1",
-    "@parcel/transformer-typescript-tsc": "^2.0.1",
-    "@parcel/transformer-typescript-types": "^2.0.1",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.22.1",
+    "@parcel/config-default": "^2.8.2",
+    "@parcel/core": "^2.8.2",
+    "@parcel/packager-ts": "^2.8.2",
+    "@parcel/transformer-typescript-tsc": "^2.8.2",
+    "@parcel/transformer-typescript-types": "^2.8.2",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.0.0",
-    "jest": "^27.4.5",
-    "parcel": "^2.0.1",
-    "prettier": "^2.5.1",
-    "standard-version": "^9.3.2",
-    "ts-jest": "^27.1.2",
-    "ts-node": "^10.4.0",
-    "typescript": "^4.5.4"
+    "eslint-plugin-promise": "^6.1.1",
+    "jest": "^29.3.1",
+    "parcel": "^2.8.2",
+    "prettier": "^2.8.1",
+    "standard-version": "^9.5.0",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
   },
   "dependencies": {
-    "@vue/compiler-dom": "3.2.26",
+    "@vue/compiler-dom": "^3.2.45",
     "get-stdin": "^9.0.0",
-    "html-entities": "2.3.2",
-    "hyntax": "1.1.9",
-    "yargs": "^17.3.1"
+    "html-entities": "^2.3.3",
+    "hyntax": "^1.1.9",
+    "yargs": "^17.6.2"
   }
 }
