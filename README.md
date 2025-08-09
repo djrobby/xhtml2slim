@@ -1,11 +1,12 @@
 # Credit
 
-This package is a derivative/fork of [xhtml2pug](https://www.npmjs.com/package/xhtml2pug), created by [dimensi](https://github.com/dimensi). I simply modified it to generate compliant Slim code (which is very similar to Pug) from HTML that heavily utilizes [TailwindCSS](https://tailwindcss.com/) classes. Traditional converters have not been updated in some time to be able to handle a lot of [TailwindCSS](https://tailwindcss.com/) class names as they contain various special charcters such as `[:, /]` to name a few. This tool fixes that by moving away from the dot notated CSS `h1#myTitle.text-neutral-800.dark:text-neutral-100 foo` classes (which tend to throw off the [Slim](https://github.com/slim-template/slim) language processor) to inline CSS classes `h1#myTitle[class="text-neutral-800 dark:text-neutral-100"] foo`. I'm a heavy user of both [Ruby Slim](https://github.com/slim-template/slim) rendering engine and [TailwindCSS](https://tailwindcss.com/) and tool allows me to move at the speed of light when it comes to converting HTML code to Slim.
+This package is a derivative/fork of [xhtml2pug](https://www.npmjs.com/package/xhtml2pug), created by [dimensi](https://github.com/dimensi). I simply modified it to generate compliant Slim code (which is very similar to Pug) from HTML that heavily utilizes [TailwindCSS](https://tailwindcss.com/) classes.
 
 # xhtml2slim
 
-Converts **HTML** and **Vue** like syntax to **Slim** or **Pug** templating language.  
-Requires Node.js version `14` or higher.
+Converts **HTML** and **Vue** like syntax to **Slim** or **Pug** templating language. Traditional converters have not been updated in some time to be able to handle a lot of [TailwindCSS](https://tailwindcss.com/) class names as they contain various special charcters such as `[:, /]` to name a few. This tool fixes that by moving away from the dot notated CSS `h1#myTitle.text-neutral-800.dark:text-neutral-100 foo` classes (which tend to throw off the [Slim](https://github.com/slim-template/slim) processor) to inline CSS classes `h1#myTitle[class="text-neutral-800 dark:text-neutral-100"] foo`. I'm a heavy user of both [Ruby Slim](https://github.com/slim-template/slim) rendering engine and [TailwindCSS](https://tailwindcss.com/) and tool allows me to move at the speed of light when it comes to converting HTML code to Slim.
+
+_Requires Node.js version `14` or higher._
 
 Using the following command (_take note of the **`-w square`** attribute wrapper flag_):
 
